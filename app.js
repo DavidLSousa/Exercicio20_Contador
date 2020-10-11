@@ -22,30 +22,84 @@ setTimeout(() => {
   - O clique no botão "Parar contador" deve fazer com que o contador exiba 0.
 */
 
+// Contador => 0.1
+// const counterContainer = document.querySelector('.counter-container')
+// const buttonInitCounter = document.querySelector('.button-init-counter')
+// const buttonStopCounter = document.querySelector('.button-stop-counter')
+
+// let timer = null
+// let condition = true
+
+// const incrementCounter = () => {
+//   const counter = Number(counterContainer.textContent)
+//   const incrementedCounter = counter + 0.1
+//   counterContainer.textContent = incrementedCounter.toFixed(1)
+// }
+
+// const stopCounter = () => {
+//   clearInterval(timer)
+//   counterContainer.textContent = 0
+//   condition = true
+// }
+
+// buttonInitCounter.addEventListener('click', () => {
+//   if (condition) {
+//     timer = setInterval(incrementCounter, 100)
+//   }
+//   condition = false
+// })
+
+// buttonStopCounter.addEventListener('click', stopCounter)
+
+/* ---------------------------------------Contador => 1.0 com a condição------------------------------------------ */
+// Contador => 1.0 com a condição
+// const counterContainer = document.querySelector('.counter-container')
+// const buttonInitCounter = document.querySelector('.button-init-counter')
+// const buttonStopCounter = document.querySelector('.button-stop-counter')
+
+// let timer = null
+// let condition = true
+
+// const incrementCounter = () => {
+//   const incrementedCounter = Number(counterContainer.textContent) + 1
+//   counterContainer.textContent = incrementedCounter
+// }
+
+// const stopCounter = () => {
+//   clearInterval(timer)
+//   counterContainer.textContent = 0
+//   condition = true
+// }
+
+// buttonInitCounter.addEventListener('click', () => {
+//   if (condition) {
+//     timer = setInterval(incrementCounter, 1000)
+//   }
+//   condition = false
+// })
+
+// buttonStopCounter.addEventListener('click', stopCounter)
+
+/* ---------------------------------------Contador => 1.0 sem a condição------------------------------------------ */
+// Contador 1.0 sem a condição
 const counterContainer = document.querySelector('.counter-container')
 const buttonInitCounter = document.querySelector('.button-init-counter')
 const buttonStopCounter = document.querySelector('.button-stop-counter')
 
 let timer = null
-let condition = true
 
 const incrementCounter = () => {
-  const counter = Number(counterContainer.textContent)
-  const incrementedCounter = counter + 0.1
-  counterContainer.textContent = incrementedCounter.toFixed(1)
+  const incrementedCounter = Number(counterContainer.textContent) + 1
+  counterContainer.textContent = incrementedCounter
 }
 
 const stopCounter = () => {
   clearInterval(timer)
   counterContainer.textContent = 0
-  condition = true
 }
 
 buttonInitCounter.addEventListener('click', () => {
-  if (condition) {
-    timer = setInterval(incrementCounter, 100)
-  }
-  condition = false
+  timer = setInterval(incrementCounter, 1000)
 })
 
 buttonStopCounter.addEventListener('click', stopCounter)
